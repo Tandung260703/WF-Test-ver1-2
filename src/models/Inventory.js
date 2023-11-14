@@ -18,5 +18,5 @@ const inventorySchema = new Schema(
   }
 );
 
-const Inventory = mongoose.model("Tokens", inventorySchema);
+const Inventory = mongoose.model("inventories", inventorySchema);
 module.exports = Inventory;

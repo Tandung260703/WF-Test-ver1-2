@@ -18,5 +18,5 @@ const orderSchema = new Schema(
   }
 );
 
-const Order = mongoose.model("Tokens", orderSchema);
+const Order = mongoose.model("orders", orderSchema);
 module.exports = Order;

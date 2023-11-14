@@ -5,13 +5,13 @@ const inventoryController = {
   async index(req, res) {
     const instock = req.query.instock;
     try {
-      const query = instock ? { quantity: { $lt: 100 } } : {};
-      const Inventories = await Inventory.find(query);
+      const query = instock ? { instock: { $lt: 100 } } : {};
+      const inventories = await Inventory.find(query);
 
       return res.json({
         success: true,
-        message: "Get All Inventories Successfully",
-        data: Inventories,
+        message: "Get All inventories Successfully",
+        data: inventories,
       });
     } catch (error) {
       if (!SERVER.__PROD__) {
